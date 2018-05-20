@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/travist.iml" filepath="$PROJECT_DIR$/.idea/modules/travist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/travist_main.iml" filepath="$PROJECT_DIR$/.idea/modules/travist_main.iml" group="travist" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/travist_test.iml" filepath="$PROJECT_DIR$/.idea/modules/travist_test.iml" group="travist" />
+    </modules>
+  </component>
+</project>
