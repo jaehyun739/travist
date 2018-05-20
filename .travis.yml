@@ -13,7 +13,7 @@ before_deploy:
      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
-  api_key: "66e6d2223d71790631c90f25572239e505a51a49"
+  api_key: "b8b0ace7ab157cdde434a057e9d3761774f7bcea"
   file_glob: true
   file:
     - "/home/travis/build/jaehyun739/travist/build/reports/jdepend/*"
