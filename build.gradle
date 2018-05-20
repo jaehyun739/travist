@@ -2,7 +2,29 @@ group 'jaehyun'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        emacs.enabled = false
+        html.enabled = true
+    }
+}
+findbugs {
+    ignoreFailures true
+}
+tasks.withType(JDepend) {
+    reports {
+        xml.enabled = false
+        text.enabled = true
 
+
+    }
+}
+jdepend {
+    ignoreFailures true
+}
 sourceCompatibility = 1.8
 
 repositories {

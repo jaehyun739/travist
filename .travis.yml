@@ -1,0 +1,25 @@
+language: java
+jdk:
+- oraclejdk8
+install: true
+before_install:
+- chmod +x gradlew
+script:
+  - "./gradlew clean check  build"
+cache: "$HOME/.m2/repository $HOME/.gradle .gradle"
+before_deploy:
+     - git config --local user.name "jaehyun"
+     - git config --local user.email "jaehyun739@gmail.com"
+     - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key: 4aecb80afe949600e2855a008f677cd572bb4a79
+  file_glob: true
+  file:
+    - "/home/travis/build/jaehyun739/travist/build/reports/jdepend/*"
+    - "/home/travis/build/jaehyun739/travist/build/reports/findbugs/*"
+    - "/home/travis/build/jaehyun739/travist/build/libs/*.jar"
+  skip_cleanup : true
+  on:
+    all_branches: true
+    repo: jaehyun739/travist
